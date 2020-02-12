@@ -20,5 +20,14 @@ class SongList extends Component {
 // react-redux library is calling a function that returns a function, then invoking that returned fn
 // connect()()
 
-export default connect()(SongList)
+//convention: call fn the mapStateToProps() fn
+//take all data in redux store, then run computation on it
+//that will cause it to show up as props in our component
+//could call it "get my state", convention === name as below
+const mapStateToProps = (state) => {
+    console.log(state)
+    return state
+}
+//pass mapStateToProps to connect fn
+export default connect(mapStateToProps)(SongList)
 
