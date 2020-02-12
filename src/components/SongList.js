@@ -48,7 +48,7 @@ class SongList extends Component {
 //could call it "get my state", convention === name as below
 const mapStateToProps = state => {
     //see redux store state: 
-    console.log("store state", state)
+    // console.log("store state", state)
     //object that we return will show up as props inside our component
     return { songs: state.songs }
 }
