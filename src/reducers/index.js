@@ -1,3 +1,4 @@
+import { combineReducers } from 'redux'
 //need songList reducer and selectedSong reducer
 //static list of songs: 
 //static, so no need to put action in as argument
@@ -22,3 +23,8 @@ const selectedSongReducer = (selectedSong = null, action) => {
     }
     return selectedSong
 }
+//keys are what show up as props
+export default combineReducers({
+    songs: songsReducer,
+    selectedSong: selectedSongReducer
+})
