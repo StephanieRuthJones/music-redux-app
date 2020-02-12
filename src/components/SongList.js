@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 class SongList extends Component {
 
     render() {
+        //we get songList and dispatch fn as props
+        console.log(this.props)
         return (
             <div>SongList</div>
         )
@@ -24,9 +26,9 @@ class SongList extends Component {
 //take all data in redux store, then run computation on it
 //that will cause it to show up as props in our component
 //could call it "get my state", convention === name as below
-const mapStateToProps = (state) => {
-    console.log(state)
-    return state
+const mapStateToProps = state => {
+    //object that we return will show up as props inside our component
+    return { songs: state.songs }
 }
 //pass mapStateToProps to connect fn
 export default connect(mapStateToProps)(SongList)
